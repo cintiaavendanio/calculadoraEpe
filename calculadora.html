@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora Epe</title>
+</head>
+
+<body>
+    <header class="cabecera">
+
+        <img src="img/logoEpe.jpg" alt="">
+        <h1>Empresa provincial de energía</h1>
+    </header>
+    <main>
+        <div class="otrasOpciones">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current-page"><a href="#">Tarifas</a></li>
+                <li><a href="https://epe.santafe.gov.ar/oficina-virtual/mantenimiento" target=" _blank">Oficina
+                        Virtual</a></li>
+                <li><a href="help.html">Ayuda</a></li>
+            </ul>
+        </div>
+        <div class="calculadora-container">
+            <form action="text">
+                <div class="usuario">
+                    <legend><b>Tipo de usuario:</b> </legend>
+                    <!-- validaciones: con el checked nos aseguramos que este seleccionada una opcion por defecto -->
+                    <input type="radio" name="TipoUsuario" value="0.21" checked />
+                    <label for="Residencial">Residencial</label>
+                    <input type="radio" name="TipoUsuario" value="0.27" />
+                    <label for="Residencial">Industrial</label>
+                </div>
+
+                <div class="zona">
+                    <legend><b>Zona de Domicilio:</b></legend>
+                    <select name="ZonaDeDomicilio" id="ZonaDeDomicilio">
+                        <!-- validaciones:por defecto ya selecciona una opcion -->
+                        <option value="5.80" selected>Distrito Centro</option>
+                        <option value="5.40">Distrito Sur</option>
+                        <option value="5.35">Distrito Oeste</option>
+                        <option value="5.60">Distrito Norte</option>
+                    </select>
+                </div>
+                <div class="kwh">
+                    <label for="number"> <b>Cantidad de kWh del mes:</b></label><br>
+                    <input type="number" name="kwh" id="cantidadKWh" value="1">
+                </div>
+                <div class="resultado">
+                    <p><b>Resultado: </b></p><br>
+                    <p id="resultado"></p>
+
+                </div>
+
+                <input type="submit" value="Calcular" class="button" onclick="calcular(event);" />
+
+
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <p>Desarrollado por Cintia Avendaño - com6 - Lab2</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

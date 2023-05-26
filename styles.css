@@ -1,0 +1,126 @@
+:root {
+  --colorEpe: #003883;
+  --colorFooter: #061427;
+  --colorOpciones: #c4cdd7;
+  --colorOpcionesHover: #c3d3e7;
+}
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+.cabecera {
+  background-color: var(--colorEpe);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+.cabecera > img {
+  width: 120px;
+}
+.cabecera > h1 {
+  margin-top: 20px;
+  color: white;
+}
+main {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 50px;
+}
+.imgEpe {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.imgEpe > img {
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.calculadora-container {
+  background-color: var(--colorEpe);
+  border-color: #003883;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-size: medium;
+  display: flex;
+}
+
+.usuario,
+.zona,
+.kwh,
+.resultado {
+  padding: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  background-color: var(--colorFooter);
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: var(--colorEpe);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: var(--colorEpe);
+  color: white;
+  box-shadow: 2px 2px 10px var (--colorFooter);
+}
+.otrasOpciones {
+  display: flex;
+}
+.otrasOpciones ul {
+  list-style: none;
+}
+.otrasOpciones li {
+  background-color: var(--colorOpciones);
+  margin: 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  color: var(--colorFooter);
+}
+.otrasOpciones a {
+  display: flex;
+  text-decoration: none;
+  color: var(--colorFooter);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.otrasOpciones li:hover {
+  box-shadow: 0px 0px 2px var(--colorEpe);
+  background-color: var(--colorOpcionesHover);
+}
+.help-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+.help-container h2 {
+  padding: 10px 0px;
+}
