@@ -28,12 +28,13 @@ body {
   margin-top: 20px;
   color: white;
 }
-main {
+.main {
   width: 100%;
   max-width: 1000px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 50px;
+  display: flex;
+  margin: 20px 0px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .imgEpe {
   display: flex;
@@ -51,10 +52,12 @@ main {
   border-color: #003883;
   border-radius: 10px;
   width: 100%;
+  max-width: 400px;
   padding: 10px;
   color: white;
   font-size: medium;
   display: flex;
+  justify-content: center;
 }
 
 .usuario,
@@ -73,6 +76,7 @@ footer {
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
+  height: 40px;
 }
 .button {
   display: flex;
@@ -90,14 +94,23 @@ footer {
 }
 .otrasOpciones {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
 }
 .otrasOpciones ul {
   list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .otrasOpciones li {
   background-color: var(--colorOpciones);
-  margin: 20px;
-  width: 100%;
+  width: 50%;
   height: 50px;
   border-radius: 10px;
   color: var(--colorFooter);
@@ -110,6 +123,7 @@ footer {
   height: 100%;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .otrasOpciones li:hover {
@@ -123,4 +137,22 @@ footer {
 }
 .help-container h2 {
   padding: 10px 0px;
+}
+
+@media (max-width: 800px) {
+  .cabecera > h1 {
+    display: none;
+  }
+
+  .main {
+    gap: 20px;
+  }
+
+  .otrasOpciones ul {
+    flex-direction: row;
+  }
+
+  .otrasOpciones li {
+    width: 100%;
+  }
 }
