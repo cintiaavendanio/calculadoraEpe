@@ -17,7 +17,8 @@ function calcular(event) {
 
   // validacion de cantidad de Kwh:
   if (cantidadKWh <= 0) {
-    document.getElementById("resultado").innerHTML =
+    document.getElementById("textResultado").textContent = "Error:";
+    document.getElementById("resultado").textContent =
       "Debe ingresar una cantidad de kwh mayor a cero";
     return;
     //con return no continua la ejecucion.
@@ -29,6 +30,7 @@ function calcular(event) {
       parseFloat(ZonaDeDomicilio) *
       (1 + parseFloat(ivaTipoUsuario));
 
+  document.getElementById("textResultado").textContent = "Resultado:";
   document.getElementById("resultado").innerHTML = Number(
     costoTotal.toFixed(2)
   );
